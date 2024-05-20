@@ -1,22 +1,17 @@
 class Car:
-    def __init__(self,nom,marque):
-        self.__nom = nom
-        self.__marque = marque
-        self.__compostion = []
+    def __init__(self, name):
+        self.__name = name
+        self.__composition = []
         
-    def add_composition(self,element):
-        self.__compostion.append(element)
-        
-    def elements(self):
-        for i in self.__compostion:
-            print(i)
+    def addComposition(self, element):
+        self.__composition.append(element)
     
-    def element_precis(self):
-        for element in self.__compostion:
+    def show_elements(self):
+        for element in self.__composition:
             print(element)
-          
-    def delete_composition(self,element):
-        self.__compostion.remove(element)
+            
+    def getComposition(self):
+        return self.__composition
     
-    def get_composition(self):
-        return self.__compostion
+    def deleteComposition(self, element):
+        self.__composition.remove(element)
